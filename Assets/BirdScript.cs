@@ -11,6 +11,7 @@ public class BirdScript : MonoBehaviour
     public LogicScript logic;
     public bool birdIsAlive = true;
 
+    // public float birdRotation = 50;
     // Update is called once per frame
     void Update()
     {
@@ -24,5 +25,7 @@ public class BirdScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         logic.gameOver();
         birdIsAlive = false;
+        // myRigidbody.velocity = Vector2.left * (velocidade * 2);
+        // transform.Rotate(0,  0, birdRotation);
     }
 }
