@@ -13,6 +13,7 @@ public class LogicScript : MonoBehaviour
     [SerializeField]
     public GameObject gameOverScreen;
 
+    public SoundEffectsScript soundEffectPlayer;
 
     [ContextMenu("Aumentar Score")]
     public void addScore(int scoreToAdd)
@@ -28,6 +29,7 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
+        soundEffectPlayer.playDeathSound();
         gameOverScreen.SetActive(true);
     }
 }
